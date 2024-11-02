@@ -1,0 +1,29 @@
+version: 4.0.79
+steps:
+  - prompt: Scroll to the footer.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Scroll to the footer.
+    commands:
+      - command: scroll-until-text
+        text: Contact Us
+        direction: down
+  - prompt: Click on a policy or terms link.
+    commands:
+      - command: hover-text
+        text: Privacy Policy
+        description: link in the footer
+        action: click
+  - prompt: >-
+      Assert that legal information is accurately displayed.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: Legal information is displayed correctly
+  - prompt: >-
+      Assert that legal information is accurately displayed.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: Legal information is displayed correctly
