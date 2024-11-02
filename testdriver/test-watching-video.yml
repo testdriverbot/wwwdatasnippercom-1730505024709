@@ -1,0 +1,23 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Watch video."
+    commands:
+      - command: hover-text
+        text: Watch video
+        description: button to play the video
+        action: click
+  - prompt: Assert that a video player opens.
+    commands:
+      - command: assert
+        expect: the video player is open
+  - prompt: Play the video.
+    commands:
+      - command: hover-image
+        description: play button on the video player
+        action: click
+  - prompt: >-
+      Assert that the video plays without errors.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the video is playing without errors
