@@ -1,0 +1,18 @@
+version: 4.0.79
+steps:
+  - prompt: Scroll down to the customer testimonials section.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Read through available testimonials.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Read through available testimonials.
+    commands:
+      - command: scroll
+        direction: down
+  - prompt: Read through available testimonials.
+    commands:
+      - command: scroll
+        direction: down
