@@ -1,0 +1,22 @@
+version: 4.0.79
+steps:
+  - prompt: Click the "Read more" link in the UpLink news banner.
+    commands:
+      - command: hover-text
+        text: Read more
+        description: link in the UpLink news banner
+        action: click
+  - prompt: Assert that the news article page is shown.
+    commands:
+      - command: assert
+        expect: >-
+          DataSnipper Supercharges AI-driven Audit Automation with Acquisition
+          of 'UpLink' and Launch of New Product, 'DocuMine'
+  - prompt: >-
+      Verify that the article content is displayed correctly.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          Dutch unicorn DataSnipper accelerates the expansion of AI technology
+          to redefine the future of audit and finance.
