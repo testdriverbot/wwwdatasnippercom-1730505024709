@@ -1,0 +1,31 @@
+version: 4.0.79
+steps:
+  - prompt: Click on the "Contact us" link in the footer.
+    commands:
+      - command: scroll-until-text
+        text: Contact us
+        direction: down
+      - command: hover-text
+        text: Contact us
+        description: link in the footer
+        action: click
+  - prompt: Assert that a contact form or contact information is displayed.
+    commands:
+      - command: assert
+        expect: the contact form or contact information is displayed
+      - command: assert
+        expect: the text "First Name" or "Email" is visible on the page
+  - prompt: Interact with the contact form.
+    commands:
+      - command: hover-text
+        text: First name
+        description: input field for first name
+        action: click
+      - command: type
+        text: John Doe
+  - prompt: >-
+      Assert that a confirmation message is received indicating successful
+      submission.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: a confirmation message is displayed
