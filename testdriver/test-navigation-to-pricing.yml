@@ -1,0 +1,24 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Pricing" in the header.
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the header
+        action: click
+  - prompt: Assert that the pricing page is displayed.
+    commands:
+      - command: assert
+        expect: Everything you need to boost productivity is visible
+  - prompt: Check any available pricing plans.
+    commands:
+      - command: assert
+        expect: Basic, Professional, and Enterprise pricing plans are visible
+  - prompt: >-
+      Assert that the information is accurate and clear.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          Basic, Professional, and Enterprise pricing plans are visible and
+          clear
