@@ -1,0 +1,38 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Resources" in the header.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Click on "Resources" in the header.
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Navigate to a downloadable resource.
+    commands:
+      - command: hover-text
+        text: Datasheets
+        description: link under Resources dropdown
+        action: click
+  - prompt: Try to initiate a download.
+    commands:
+      - command: hover-text
+        text: Download now
+        description: link to initiate download
+        action: click
+  - prompt: Try to initiate a download.
+    commands:
+      - command: hover-text
+        text: Download Audit Horror Stories
+        description: download button on the page
+        action: click
+  - prompt: >-
+      Assert that the download link works correctly and no errors are shown.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the PDF document is displayed correctly without errors
